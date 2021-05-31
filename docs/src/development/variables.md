@@ -373,10 +373,10 @@ Certain variable name prefixes have special meaning.  A few of these are defined
 
 By default, project and environment variables are only added as part of the `$PLATFORM_VARIABLES` Unix environment variable.  However, you can also expose a variable as its own Unix environment variable by giving it the prefix `env:`.
 
-For example, the variable `env:foo` will create a Unix environment variable called `FOO`.  (Note the automatic upper-casing.)
+For example, the variable `env:FOO` will create a Unix environment variable called `FOO`.
 
 ```ini
-$ platform variable:create --name env:foo --value bar
+$ platform variable:create --name env:FOO --value bar
 ```
 
 With PHP, you can then access that variable with `getenv('FOO')`.
